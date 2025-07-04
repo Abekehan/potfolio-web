@@ -1,0 +1,133 @@
+.info-wrapper {
+  /* background: linear-gradient(135deg, #1a1a2e, #16213e); */
+  padding: 100px 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  background: linear-gradient(145deg, #3a1c71, #201314, #ec1414b4);
+  background-size: 300% 300%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.info-section {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 24px;
+  /* border: 2px solid white; */
+  border-radius: 16px;
+  background: rgba(16, 6, 6, 0.629);
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease;
+}
+
+.info-photo {
+  width: 180px;            /* фиксированная ширина рамки */
+  height: 250px;           /* высота по желанию */
+  overflow: hidden;        /* чтобы фото не выходило за рамку */
+  border-radius: 16px;     /* закруглённые углы, опционально */
+  /* border: 2px solid #fff;  белая рамка */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* тень */
+  opacity: 0.9;
+}
+
+.info-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* чтобы фото заполнило рамку красиво */
+  display: block;
+}
+
+.info-icons {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-icons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.info-icons img:hover {
+  transform: scale(1.2);
+}
+
+.info-text {
+  flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-text h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.info-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-photo,
+  .info-icons,
+  .info-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info-photo {
+    height: 180px;
+  }
+
+  .info-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* home text */
+
+.home-text {
+  flex: 1;
+  color: rgb(19, 19, 19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 300px;
+  text-align: center;  /* — выравнивает сам текст (текст внутри h2, p). */
+  /* align-items: center; — выравнивает дочерние элементы по центру в флексе.
+    justify-content: center; — добавлять только если блоку задана высота, и ты хочешь по вертикали тоже по центру. */
+}
+
+.home-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.home-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
