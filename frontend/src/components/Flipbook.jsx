@@ -23,6 +23,8 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import { pageNavigationPlugin } from '@react-pdf-viewer/page-navigation';
 import '@react-pdf-viewer/page-navigation/lib/styles/index.css';
 
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.min?url';
+
 const Flipbook = () => {
     const pageNavigationPluginInstance = pageNavigationPlugin();
     const { jumpToNextPage, jumpToPreviousPage } = pageNavigationPluginInstance;
@@ -33,7 +35,8 @@ const Flipbook = () => {
             <button className="nav-btn right" onClick={jumpToNextPage}> &#8594;</button>
 
             <div style={{ height: '800px' }}>
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                <Worker workerUrl={pdfWorker}>
+                {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js"> */}
                     <Viewer
                         fileUrl="/pdfs/Portfolio.pdf"
                         defaultScale={SpecialZoomLevel.PageFit}
