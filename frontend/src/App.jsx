@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router'
 import HomePage from './Pages/HomePage'
 import Layout from "./components/Layout";
 import Projects from './Pages/Projects'
-import AuthPage from './pages/AuthPage';
+import AuthPage from './Pages/AuthPage';
 import Contact from './Pages/Contact'
 import Inwork from './Pages/Inwork'
 
