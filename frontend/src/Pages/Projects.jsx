@@ -1,7 +1,7 @@
 import React from "react";
 import PageTitle from "../components/Pagetitle"; // создай этот файл
 import Footer from "../components/Footer";
-import FlipBook from "../components/flipbook";
+import FlipBook from "../components/Flipbook";
 
 const Projects = () => {
   return (
